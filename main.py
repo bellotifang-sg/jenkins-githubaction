@@ -84,6 +84,7 @@ def main():
     sleep(interval)
     while time() - t0 < timeout:
         result = build.result
+        logging.info(f'Build result: {result}')
         if result == 'SUCCESS':
             logging.info('Build successful 🎉')
             return
