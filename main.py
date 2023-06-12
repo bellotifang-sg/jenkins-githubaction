@@ -80,6 +80,7 @@ def main():
         logging.info("Not waiting for build to finish.")
         return
 
+    logging.info(f'Build object: {build}')
     t0 = time()
     sleep(interval)
     while time() - t0 < timeout:
