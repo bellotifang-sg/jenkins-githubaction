@@ -29,6 +29,8 @@ def main():
         auth = None
         logging.info(
             'Username or token not provided. Connecting without authentication.') # noqa
+    print(f"username", username)
+    print(f"api_token_lenght", len(api_token))
 
     if parameters:
         try:
