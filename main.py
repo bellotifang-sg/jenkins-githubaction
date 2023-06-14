@@ -55,9 +55,9 @@ def main():
 
     logging.info('Successfully connected to Jenkins.')
 
-    logging.info(f"username", username)
-    logging.info(f"api_token_lenght", len(api_token))
-    logging.info(f"auth_lenght", len(auth))
+    logging.info(username)
+    logging.info(len(api_token))
+    logging.info(len(auth))
 
     queue_item = jenkins.build_job(job_name, **parameters)
 
