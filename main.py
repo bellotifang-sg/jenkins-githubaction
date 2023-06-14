@@ -29,6 +29,10 @@ def main():
         auth = None
         logging.info(
             'Username or token not provided. Connecting without authentication.') # noqa
+        
+    logging.info(f'username: {username}')
+    logging.info(f'api_token_lenght: {len(api_token)}')
+    logging.info(f'auth_lenght: {len(auth)}')
 
     if parameters:
         try:
@@ -54,10 +58,6 @@ def main():
         raise Exception('Could not connect to Jenkins.') from e
 
     logging.info('Successfully connected to Jenkins.')
-
-    logging.info(f'username: {username}')
-    logging.info(f'api_token_lenght: {len(api_token)}')
-    logging.info(f'auth_lenght: {len(auth)}')
 
     queue_item = jenkins.build_job(job_name, **parameters)
 
