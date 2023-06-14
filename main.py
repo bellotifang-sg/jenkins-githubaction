@@ -29,8 +29,6 @@ def main():
         auth = None
         logging.info(
             'Username or token not provided. Connecting without authentication.') # noqa
-    print(f"username", username)
-    print(f"api_token_lenght", len(api_token))
 
     if parameters:
         try:
@@ -74,6 +72,10 @@ def main():
             f"Could not obtain build and timed out. Waited for {start_timeout} seconds.") # noqa
 
     build_url = build.url
+
+    print(f"username", username)
+    print(f"api_token_lenght", len(api_token))
+    
     logging.info(f"Build URL: {build_url}")
     print(f"build_url={build_url} >> $GITHUB_OUTPUT")
     print(f"::notice title=build_url::{build_url}")
