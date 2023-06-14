@@ -55,6 +55,9 @@ def main():
 
     logging.info('Successfully connected to Jenkins.')
 
+    print(f"username", username)
+    print(f"api_token_lenght", len(api_token))
+
     queue_item = jenkins.build_job(job_name, **parameters)
 
     logging.info('Requested to build job.')
@@ -73,9 +76,6 @@ def main():
 
     build_url = build.url
 
-    print(f"username", username)
-    print(f"api_token_lenght", len(api_token))
-    
     logging.info(f"Build URL: {build_url}")
     print(f"build_url={build_url} >> $GITHUB_OUTPUT")
     print(f"::notice title=build_url::{build_url}")
