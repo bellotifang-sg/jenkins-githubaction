@@ -32,7 +32,7 @@ def main():
         
     logging.info(f'username: {username}')
     logging.info(f'api_token_lenght: {len(api_token)}')
-    logging.info(f'auth_lenght: {len(auth)}')
+    logging.info(f'auth: {auth}')
     logging.info(f'url: {url}')
     logging.info(f'auth_url: {len(url)}')
     logging.info(f'job_name: {job_name}')
