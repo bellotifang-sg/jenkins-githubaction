@@ -35,6 +35,7 @@ def main():
     logging.info(f'auth_lenght: {len(auth)}')
     logging.info(f'url: {url}')
     logging.info(f'auth_url: {len(url)}')
+    logging.info(f'job_name: {job_name}')
 
     if parameters:
         try:
